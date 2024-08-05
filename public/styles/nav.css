@@ -9,17 +9,13 @@ nav {
   color: #FFFFFF;
 }
 
-.fa-solid {
-  color: red;
-}
-
+/* edits the top left nav logo TWEETER */
 .fontStylerNSpacing {
   align-self: center;
-  font-size: 35px;
   font-family: "Bungee";
+  font-size: 35px;
   padding-left: 1.5em;
   padding-right: 1.5em;
-
 }
 
 .writeTweetDropDown {
@@ -27,7 +23,12 @@ nav {
   padding-right: 1.5em;
 }
 
-.moveBelow {
+.iconContainer {
   display: flex;
   justify-content: center;
+}
+
+/* changes the color of the drop down button*/
+.fa-solid {
+  color: #eb0a0a;
 }
