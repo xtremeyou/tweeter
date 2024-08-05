@@ -1,49 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <!-- Meta Information -->
-    <title>Tweeter - Home Page</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
+<head>
+  <!-- Meta Information -->
+  <title>Tweeter - Home Page</title>
 
-    <!--Bunge and Source sans font-->
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
 
-    <!--Font Awesome CSS-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <!--Bunge and Source sans font-->
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Bungee&family=Source+Sans+3:ital,wght@0,200..900;1,200..900&display=swap"
+    rel="stylesheet">
 
-    <!-- External CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" type="text/css" />
+  <!--Font Awesome CSS-->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+    integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- App CSS -->
-    <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
+  <!-- External CSS -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    type="text/css" />
 
-    <!-- Nav CSS-->
-    <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
+  <!-- App CSS -->
+  <link rel="stylesheet" href="/styles/layout.css" type="text/css" />
 
-    <!-- External JS -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+  <!-- Nav CSS-->
+  <link rel="stylesheet" href="/styles/nav.css" type="text/css" />
 
-    <!-- App JS -->
-    <script type="text/javascript" src="/scripts/client.js"></script>
-  </head>
+  <!--Header CSS-->
+  <link rel="stylesheet" href="/styles/header.css" type="text/css" />
 
-  <body>
-    <!-- Top nav bar (fixed) -->
-    <nav>
-      <span class="fontStylerNSpacing">TWEETER</span>
+  <!-- External JS -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
-      <span class="alignToBaseline">
-        <span class="writeTweetDropDown"><b>Write </b> a new tweet</span>
-          <span class="iconContainer">
-            <i class="fa-solid fa-angles-down"></i>
-          </span>
-        </span>
- 
-    </nav>
+  <!-- App JS -->
+  <script type="text/javascript" src="/scripts/client.js"></script>
+</head>
 
-    <!-- Page-specific (main) content here -->
-    <main class="container"></main>
-  </body>
+<body>
+  <!-- Top nav bar (fixed) -->
+  <nav>
+    <span class="fontStylerNSpacing">TWEETER</span>
+    <span>
+      <span class="writeTweetDropDown"><b>Write</b> a new tweet</span>
+      <span class="iconContainer">
+        <i class="fa-solid fa-angles-down"></i>
+      </span>
+    </span>
+  </nav>
+
+  <header>
+    <div class="icon">
+      <img src="/images/profile-hex.png">
+    </div>
+    <br>
+      <div>
+        <h2 class="centerName">Maverick Bourque</h2>
+      </div>
+  </header>
+
+  <!-- Page-specific (main) content here -->
+  <main class="container"></main>
+</body>
+
 </html>

@@ -1,0 +1,19 @@
+header {
+  width: 100%;
+  background-color: #d4c900;
+  background-image: url(http://www.transparenttextures.comnone);
+}
+
+.icon {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
+
+.centerName {
+  display: flex;
+  justify-content: center;
+  align-self: center;
+}
+
