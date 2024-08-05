@@ -1,0 +1,33 @@
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;  
+  width: 100vw;
+  height: 120px;
+  background-color: #4056a1;
+  color: #FFFFFF;
+}
+
+.fa-solid {
+  color: red;
+}
+
+.fontStylerNSpacing {
+  align-self: center;
+  font-size: 35px;
+  font-family: "Bungee";
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+
+}
+
+.writeTweetDropDown {
+  padding-left: 1.5em;
+  padding-right: 1.5em;
+}
+
+.moveBelow {
+  display: flex;
+  justify-content: center;
+}
