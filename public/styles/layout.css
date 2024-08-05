@@ -21,9 +21,18 @@ body {
   font-weight: 300, 400, 600;
   font-family: "Source Sans 3", sans-serif;
   padding-top: 120px;
-
+  height: 100vh;
 }
 
 /*
  * Additional CSS can be defined below or in other CSS files, as per instructions
  */
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  width: 90%;
+  background-color: #d4c900;
+}
