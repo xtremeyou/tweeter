@@ -3,13 +3,11 @@
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  flex: 100vh;
 }
 
 .tweetLabel {
 padding-top: 10px;
 display: flex;
-flex: 100vh;
 align-self: flex-start;
 }
 
@@ -19,9 +17,9 @@ align-self: flex-start;
   outline: none;
   resize: none;
   border-bottom:ridge;
-  border-top: transparent;
-  border-left: transparent;
-  border-right: transparent;
+  border-top: none;
+  border-left: none;
+  border-right: none;
   background-color: inherit;
 }
 
