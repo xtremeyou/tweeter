@@ -44,7 +44,7 @@
 <body>
   <!-- Top nav bar (fixed) -->
   <nav>
-    <span class="fontStylerNSpacing">TWEETER</span>
+    <span class="tweeterLogoStyling">TWEETER</span>
     <span>
       <span class="writeTweetDropDown"><b>Write</b> a new tweet</span>
       <span class="iconContainer">
@@ -67,10 +67,10 @@
   <main class="container">
     <section class="new-tweet">
       <form action="/" method="post">
-        <label for="tweet-text">What are you humming about?</label>
+        <label for="tweet-text" class="tweetLabel">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
-        <div>
-          <button type="submit">Tweet</button>
+        <div class="seperateButtonAndCounter">
+          <button type="submit" class="submitNewTweetButton1">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
