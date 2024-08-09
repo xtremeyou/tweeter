@@ -34,6 +34,9 @@
   <!-- Form for new tweets.css -->
   <link rel="stylesheet" href="/styles/new-tweet.css" type="text/css" />
 
+  <!-- tweets CSS -->
+  <link rel="stylesheet" href="/styles/tweet.css" type="text/css" />
+
   <!-- External JS -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
@@ -74,6 +77,33 @@
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
       </form>
+    </section>
+
+    <section class="showTweetsHere">
+      <article>
+        <header class="tweetHeader">
+          <label><i class="fa-solid fa-face-smile"></i> Maverick Bourque</label>
+          <div>@username</div>
+        </header>
+
+        <!-- content of the tweet -->
+        <div>
+          <section class="new-tweet">
+            <div>
+              <textarea name="text" id="tweet-text"></textarea>
+              <div class="seperateButtonAndCounter">
+                <div>just now</div>
+                <div>small icons here</div>
+              </div>
+            </div>
+          </section>
+        </div>
+
+        <footer>
+          <!-- tweet footer -->
+        </footer>
+
+      </article>
     </section>
   </main>
   <script type="text/javascript" src="/scripts/client.js"></script>

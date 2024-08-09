@@ -1,0 +1,24 @@
+
+
+
+.showTweetsHere {
+  display: flex;
+  justify-content: center; 
+  margin-top: 25px;
+  padding: 8px;
+  border-color: white;
+  border-style: ridge;
+}
+
+.showTweetsHere:hover {
+  box-shadow: 5px 3px 3px lightgray;
+}
+
+.tweetHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 25px;
+  height: 50px;
+  background-color: inherit;
+}

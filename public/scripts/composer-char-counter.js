@@ -8,9 +8,9 @@ $(document).ready(function () {
     count.text(totalCount);
 
     if (totalCount <= 0) {
-      count.css('color', 'red')
+      count.addClass('red')
     } else {
-      count.css('color', '')
+      count.removeClass('red')
     }
   })
 });

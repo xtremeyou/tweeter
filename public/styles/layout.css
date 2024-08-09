@@ -29,10 +29,12 @@ body {
  */
 
 .container {
-  display: flex;
-  justify-content: center;
+  display: flex; 
+  flex-direction: column;
+  justify-content: flex-start;
   align-items: center;
   margin: auto;
+  padding-top: 25px;
   width: 90%;
   background-color: inherit;
 }
