@@ -41,7 +41,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- App JS -->
-  
+
 </head>
 
 <body>
@@ -61,15 +61,15 @@
       <img src="/images/profile-hex.png">
     </div>
     <br>
-      <div>
-        <h2 class="centerName">Maverick Bourque</h2>
-      </div>
+    <div>
+      <h2 class="centerName">Maverick Bourque</h2>
+    </div>
   </header>
 
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <form action="/tweets" method="post">
+      <form action="/tweets" method="POST">
         <label for="tweet-text" class="tweetLabel">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div class="seperateButtonAndCounter">
@@ -82,32 +82,37 @@
     <section class="showTweetsHere">
       <article>
         <header class="tweetHeader">
-          <label><i class="fa-solid fa-face-smile"></i> Maverick Bourque</label>
-          <div>@username</div>
+          <label class="nameSizeInTweets"><i class="fa-regular fa-face-smile"></i> Maverick Bourque</label>
+          <div class="usernameTweetColor">@username</div>
         </header>
 
         <!-- content of the tweet -->
         <div>
           <section class="new-tweet">
             <div>
-              <textarea name="text" id="tweet-text"></textarea>
-              <div class="seperateButtonAndCounter">
-                <div>just now</div>
-                <div>small icons here</div>
-              </div>
+              <div id="tweet-text" class="tweetParagraphStyling">
+                <p id="tweetsGoHereFromServer">This is where tweets go</p> <!--subject to change-->
             </div>
           </section>
         </div>
 
         <footer>
           <!-- tweet footer -->
+          <div class="seperateButtonAndCounter">
+            <div class="lastPostedTime">just now</div>
+            <div id="smallIcons">
+              <i class="fa-solid fa-flag"></i>
+              <i class="fa-solid fa-retweet"></i>
+              <i class="fa-solid fa-heart"></i>
+            </div>
+          </div>
         </footer>
 
       </article>
     </section>
   </main>
   <script type="text/javascript" src="/scripts/client.js"></script>
-  <script type="text/javascript" src="/scripts/composer-char-counter.js"></script>
+  <script type="text/javascript" src="/scripts/composer-char-counter.js"> </script>
 
 </body>
 

@@ -8,17 +8,65 @@
   padding: 8px;
   border-color: white;
   border-style: ridge;
+  border-color: black;
 }
 
 .showTweetsHere:hover {
-  box-shadow: 5px 3px 3px lightgray;
+  box-shadow: 8px 5px 5px lightgray;
 }
 
 .tweetHeader {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 25px;
+  padding: 10px;
   height: 50px;
   background-color: inherit;
 }
+
+.usernameTweetColor {
+  color: lightgray;
+  font-size: 20px;
+}
+
+.tweetParagraphStyling {
+  padding: 10px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.seperateButtonAndCounter {
+padding: 10px;
+}
+
+.lastPostedTime {
+  font-size: small;
+  color: black;
+  font-weight: 400;
+}
+
+#smallIcons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0;
+  margin: 0;
+  font-size: 20px;
+}
+#smallIcons i {
+  font-size: 20px;
+  margin: 0 5px;
+  color: #4056a1;
+}
+
+#smallIcons i:hover {
+  color: #d4c900;;
+}
+
+.nameSizeInTweets {
+  font-size: 20px;
+  font-weight: 300;
+  font-family: "Source Sans 3";
+}
+
+

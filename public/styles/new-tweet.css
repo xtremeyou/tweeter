@@ -17,6 +17,7 @@ align-self: flex-start;
   outline: none;
   resize: none;
   border-bottom:ridge;
+  border-color: black;
   border-top: none;
   border-left: none;
   border-right: none;
@@ -30,6 +31,7 @@ align-self: flex-start;
 
 .submitNewTweetButton1 {
   background-color: #4056a1;
+  color: white;
   border: 0;
   margin-top: 10px;
   padding-left: 12px;
@@ -40,6 +42,7 @@ align-self: flex-start;
 .counter {
   font-family: "Bungee";
   margin-top: 12px;
+  color: grey;
 }
 
 .counter.red {
