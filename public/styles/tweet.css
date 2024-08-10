@@ -1,6 +1,4 @@
 
-
-
 .showTweetsHere {
   display: flex;
   justify-content: center; 
@@ -10,6 +8,7 @@
   border-style: ridge;
   border-color: black;
 }
+
 
 .showTweetsHere:hover {
   box-shadow: 8px 5px 5px lightgray;
@@ -67,5 +66,4 @@ padding: 10px;
   font-weight: 300;
   font-family: "Source Sans 3";
 }
-
 
