@@ -69,10 +69,10 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <form action="/tweets" method="POST">
+      <form action="/tweets" method="POST" class="adjustWidthOfTweetsForm">
         <label for="tweet-text" class="tweetLabel">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
-        <div class="seperateButtonAndCounter">
+        <div class="seperateButtonAndCounter" id="thisDamnDiv">
           <button type="submit" class="submitNewTweetButton1">Tweet</button>
           <output name="counter" class="counter" for="tweet-text">140</output>
         </div>
@@ -82,7 +82,7 @@
     <section class="showTweetsHere">
       <article>
         <header class="tweetHeader">
-          <label class="nameSizeInTweets"><i class="fa-regular fa-face-smile"></i> Maverick Bourque</label>
+          <div class="nameSizeInTweets"><i class="fa-regular fa-face-smile"></i> Maverick Bourque</div>
           <div class="usernameTweetColor">@username</div>
         </header>
 
@@ -100,7 +100,7 @@
           <!-- tweet footer -->
           <div class="seperateButtonAndCounter">
             <div class="lastPostedTime">just now</div>
-            <div id="smallIcons">
+            <div class="smallIcons">
               <i class="fa-solid fa-flag"></i>
               <i class="fa-solid fa-retweet"></i>
               <i class="fa-solid fa-heart"></i>

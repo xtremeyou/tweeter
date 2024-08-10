@@ -41,11 +41,10 @@ padding: 10px;
 
 .lastPostedTime {
   font-size: small;
-  color: black;
   font-weight: 400;
 }
 
-#smallIcons {
+.smallIcons {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -53,7 +52,7 @@ padding: 10px;
   margin: 0;
   font-size: 20px;
 }
-#smallIcons i {
+.smallIcons i {
   font-size: 20px;
   margin: 0 5px;
   color: #4056a1;
