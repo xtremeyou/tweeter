@@ -16,7 +16,7 @@ html {
 
 body {
   color: black;
-  background-color: #f4f1ec;
+  background-color: #f1e9d8;
   font-size: 24px;
   font-weight: 300, 400;
   font-family: "Source Sans 3", sans-serif;
@@ -30,6 +30,7 @@ body {
 
 .container {
   display: flex; 
+  flex-wrap: wrap;
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;

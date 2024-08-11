@@ -1,16 +1,23 @@
 
+
 .showTweetsHere {
   display: flex;
   justify-content: center; 
   margin-top: 25px;
-  padding: 8px;
+}
+
+.articleFormatting{
+  padding: 20px;
+  padding-top: 25px;
+  width: 90vw;
+  padding-bottom: 0;
+  margin-bottom: 25px;
   border-color: white;
   border-style: ridge;
   border-color: black;
 }
 
-
-.showTweetsHere:hover {
+.articleFormatting:hover {
   box-shadow: 8px 5px 5px lightgray;
 }
 
@@ -30,15 +37,23 @@
 
 .tweetParagraphStyling {
   padding: 10px;
+  padding-top: 30px;
   font-size: 24px;
-  font-weight: 600;
+  font-weight: 500;
+  border-bottom:ridge;
+  border-color: black;
 }
 
-.seperateButtonAndCounter {
-padding: 10px;
+.seperateButtonAndCounterTweets {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px;
+  padding-bottom: 30px;
 }
 
 .lastPostedTime {
+  display: flex;
+  justify-content: flex-start;
   font-size: small;
   font-weight: 400;
 }
@@ -49,21 +64,30 @@ padding: 10px;
   align-items: center;
   padding: 0;
   margin: 0;
-  font-size: 20px;
+  font-size: 15px;
 }
 .smallIcons i {
-  font-size: 20px;
+  font-size: 15px;
   margin: 0 5px;
   color: #4056a1;
 }
 
-#smallIcons i:hover {
+
+
+/* #smallIcons i:hover { need to use js for this...
   color: #d4c900;;
-}
+} */
 
 .nameSizeInTweets {
+  display: flex;
+  align-items: center;
   font-size: 20px;
   font-weight: 300;
   font-family: "Source Sans 3";
+}
+
+.tweetIconTopLeft {
+  padding-right: 15px;
+  width: 60px;
 }
 

@@ -69,7 +69,7 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
-      <form action="/tweets" method="POST" class="adjustWidthOfTweetsForm">
+      <form action="/tweets" method="POST" id="tweetsForm">
         <label for="tweet-text" class="tweetLabel">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
         <div class="seperateButtonAndCounter" id="thisDamnDiv">
@@ -78,45 +78,16 @@
         </div>
       </form>
     </section>
-
+    
+    <!-- dynamic tweets -->
     <section class="showTweetsHere">
-      <article>
-        <header class="tweetHeader">
-          <div class="nameSizeInTweets"><i class="fa-regular fa-face-smile"></i> Maverick Bourque</div>
-          <div class="usernameTweetColor">@username</div>
-        </header>
-
-        <!-- content of the tweet -->
-        <div>
-          <section class="new-tweet">
-            <div>
-              <div id="tweet-text" class="tweetParagraphStyling">
-                <p id="tweetsGoHereFromServer">This is where tweets go</p> <!--subject to change-->
-            </div>
-          </section>
-        </div>
-
-        <footer>
-          <!-- tweet footer -->
-          <div class="seperateButtonAndCounter">
-            <div class="lastPostedTime">just now</div>
-            <div class="smallIcons">
-              <i class="fa-solid fa-flag"></i>
-              <i class="fa-solid fa-retweet"></i>
-              <i class="fa-solid fa-heart"></i>
-            </div>
-          </div>
-        </footer>
-
-      </article>
+      <div id="tweets-container"></div>
     </section>
-
-    <div id="tweets-container"></div>
-
   </main>
+
+
   <script type="text/javascript" src="/scripts/client.js"></script>
   <script type="text/javascript" src="/scripts/composer-char-counter.js"> </script>
-
 </body>
 
 </html>
