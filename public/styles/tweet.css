@@ -51,7 +51,7 @@
   padding-bottom: 30px;
 }
 
-.lastPostedTime {
+.timeago {
   display: flex;
   justify-content: flex-start;
   font-size: small;
