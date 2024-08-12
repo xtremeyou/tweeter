@@ -12,6 +12,7 @@ $(document).ready(function () {
     return true;
   }
 
+  // subits form 
   $("#tweetsForm").on('submit', function (event) {
     event.preventDefault();
     const textAreaValue = $("textarea").val().trim();
@@ -23,6 +24,7 @@ $(document).ready(function () {
     })
   });
 
+  //gets form from server
   const loadTweets = function () {
     $.ajax('http://localhost:8080/tweets', { method: 'GET' }) // grabs data from URL /tweets
       .then(function (data) { // upon success gets the data
@@ -32,15 +34,15 @@ $(document).ready(function () {
       .catch(function (error) { // handles errors
         console.error('Error:', error);
       });
+      $("#tweetsForm")[0].reset();
   };
 
   // the tweets paramater is passed the data from the tweets inside the server
   const renderTweets = function (tweets) {
     const $tweetContainer = $("#tweets-container"); //creates a variable to store the location of the id tag
-
-    tweets.forEach((tweet) => {
-      const $tweet = createTweetElement(tweet);
-      $tweetContainer.append($tweet);
+    tweets.forEach((tweet) => { 
+      const $tweet = createTweetElement(tweet); // creates new tweet withen adds it to a variable called $tweet 
+      $tweetContainer.prepend($tweet); //adds a new updated tweet to be rendered on the page, displaying first instead of last each time a tweet is made
     });
   };
 
