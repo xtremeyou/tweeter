@@ -1,14 +1,21 @@
 $(document).ready(function () {
 
-  $("#tweetsForm").on('submit', function (event) {
-    event.preventDefault();
-    const textAreaValue = $("textarea").val();
-    if (textAreaValue === "" || textAreaValue === null) {
+  function isTweetValid(tweet) {
+    if (tweet === "" || tweet === null) {
       alert("Please enter text to submit")
       return;
     }
-    if (textAreaValue.length > 140) {
+    if (tweet.length > 140) {
       alert("Please enter a message that's less than 140 characters!")
+      return;
+    }
+    return true;
+  }
+
+  $("#tweetsForm").on('submit', function (event) {
+    event.preventDefault();
+    const textAreaValue = $("textarea").val().trim();
+    if (!isTweetValid(textAreaValue)) {
       return;
     }
     $.post("http://localhost:8080/tweets", $(this).serialize(), function () {
@@ -72,8 +79,6 @@ $(document).ready(function () {
   };
 
   loadTweets();
-
-  timeAgo.format(Date.now() - 10 * 1000, customStyle)
 
   //helps override specificity for small tweet icon hover colours
   $(document).on("mouseover", ".hoverColourChange", function () {
