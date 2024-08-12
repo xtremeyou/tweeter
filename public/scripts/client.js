@@ -1,23 +1,31 @@
-
 $(document).ready(function () {
-
 
   $("#tweetsForm").on('submit', function (event) {
     event.preventDefault();
+    const textAreaValue = $("textarea").val();
+    if (textAreaValue === "" || textAreaValue === null) {
+      alert("Please enter text to submit")
+      return;
+    }
+    if (textAreaValue.length > 140) {
+      alert("Please enter a message that's less than 140 characters!")
+      return;
+    }
     $.post("http://localhost:8080/tweets", $(this).serialize(), function () {
-      loadTweets()
+      loadTweets();
     })
-  })
-
+  });
 
   const loadTweets = function () {
-    $.ajax('http://localhost:8080/tweets', { method: 'GET' }) //grabs data from url /tweets
-      .then(function (data) { //upon success gets the data then 
-        $('#tweets-container').empty()
-        renderTweets(data) //passes it to renderTweets
+    $.ajax('http://localhost:8080/tweets', { method: 'GET' }) // grabs data from URL /tweets
+      .then(function (data) { // upon success gets the data
+        $('#tweets-container').empty();
+        return renderTweets(data); // passes data to renderTweets
+      })
+      .catch(function (error) { // handles errors
+        console.error('Error:', error);
       });
   };
-
 
   // the tweets paramater is passed the data from the tweets inside the server
   const renderTweets = function (tweets) {
