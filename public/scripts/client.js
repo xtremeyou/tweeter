@@ -1,13 +1,18 @@
 $(document).ready(function () {
 
+  //validation function for submit tweets form
   function isTweetValid(tweet) {
     if (tweet === "" || tweet === null) {
       alert("Please enter text to submit")
-      return;
+      return false;
     }
     if (tweet.length > 140) {
       alert("Please enter a message that's less than 140 characters!")
-      return;
+      $('#tweet-text').val('');
+      $('#charCounter').text('140');
+      $('#charCounter').css('color', "grey")
+
+      return false;
     }
     return true;
   }
@@ -16,12 +21,21 @@ $(document).ready(function () {
   $("#tweetsForm").on('submit', function (event) {
     event.preventDefault();
     const textAreaValue = $("textarea").val().trim();
+    $('<textarea').text(textAreaValue); //prevents XSS or cross site scripting
     if (!isTweetValid(textAreaValue)) {
       return;
     }
-    $.post("http://localhost:8080/tweets", $(this).serialize(), function () {
-      loadTweets();
-    })
+    $.post("http://localhost:8080/tweets", $(this).serialize())
+      .done(function () {
+        loadTweets();
+        $('#tweet-text').val('');
+        $('#charCounter').text('140');
+        $("#tweetsForm")[0].reset();
+      })
+      .fail(function (jqXHR, textStatus, errorThrown) {
+        console.error("Error:", textStatus, errorThrown)
+
+      })
   });
 
   //gets form from server
@@ -34,13 +48,12 @@ $(document).ready(function () {
       .catch(function (error) { // handles errors
         console.error('Error:', error);
       });
-      $("#tweetsForm")[0].reset();
   };
 
   // the tweets paramater is passed the data from the tweets inside the server
   const renderTweets = function (tweets) {
     const $tweetContainer = $("#tweets-container"); //creates a variable to store the location of the id tag
-    tweets.forEach((tweet) => { 
+    tweets.forEach((tweet) => {
       const $tweet = createTweetElement(tweet); // creates new tweet withen adds it to a variable called $tweet 
       $tweetContainer.prepend($tweet); //adds a new updated tweet to be rendered on the page, displaying first instead of last each time a tweet is made
     });
