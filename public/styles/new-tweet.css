@@ -16,6 +16,21 @@ display: flex;
 align-self: flex-start;
 }
 
+#errorHandlingMessage {
+  border-style: solid;
+  border-color: red;
+  background-color: red;
+  color: white;
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#errorHandlingMessage i {
+  color: white;
+  width: 20px;
+  margin-right: 10px;
+}
+
 #tweet-text {
   font-family: "source sans 3";
   font-weight: 600;

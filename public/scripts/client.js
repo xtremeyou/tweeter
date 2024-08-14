@@ -1,17 +1,17 @@
+$('#errorHandlingMessage').hide(); //I want it to hide before page load
+
 $(document).ready(function () {
+
 
   //validation function for submit tweets form
   function isTweetValid(tweet) {
+    let errorMessages = $('#errorHandlingMessage')
     if (tweet === "" || tweet === null) {
-      alert("Please enter text to submit")
+      errorMessages.html("<i class='fa-solid fa-triangle-exclamation'></i><label> Please enter text to submit tweet! </label>").slideDown(200);
       return false;
     }
     if (tweet.length > 140) {
-      alert("Please enter a message that's less than 140 characters!")
-      $('#tweet-text').val('');
-      $('#charCounter').text('140');
-      $('#charCounter').css('color', "grey")
-
+      errorMessages.html("<i class='fa-solid fa-triangle-exclamation'></i><label> Please enter a message that's less than 140 characters! </label>").slideDown(200)
       return false;
     }
     return true;
@@ -21,16 +21,17 @@ $(document).ready(function () {
   $("#tweetsForm").on('submit', function (event) {
     event.preventDefault();
     const textAreaValue = $("textarea").val().trim();
-    $('<textarea').text(textAreaValue); //prevents XSS or cross site scripting
+    $('<textarea>').text(textAreaValue); //prevents XSS or cross site scripting
     if (!isTweetValid(textAreaValue)) {
-      return;
+      return false;
     }
     $.post("http://localhost:8080/tweets", $(this).serialize())
       .done(function () {
         loadTweets();
+        $('#errorHandlingMessage').slideUp(200);
         $('#tweet-text').val('');
         $('#charCounter').text('140');
-        $("#tweetsForm")[0].reset();
+        $('#charCounter').removeClass('red');
       })
       .fail(function (jqXHR, textStatus, errorThrown) {
         console.error("Error:", textStatus, errorThrown)

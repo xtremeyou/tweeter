@@ -41,7 +41,12 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
   <!-- timeago script -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js" integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/timeago.js/4.0.2/timeago.min.js"
+    integrity="sha512-SVDh1zH5N9ChofSlNAK43lcNS7lWze6DTVx1JCXH1Tmno+0/1jMpdbR8YDgDUfcUrPp1xyE53G42GFrcM0CMVg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+
+  <!-- font awesome kit script -->
+  <script src="https://kit.fontawesome.com/f5cc3789d1.js" crossorigin="anonymous"></script>
 
 </head>
 
@@ -70,6 +75,9 @@
   <!-- Page-specific (main) content here -->
   <main class="container">
     <section class="new-tweet">
+
+      <label for="tweet-text" id="errorHandlingMessage"></label>
+
       <form action="/tweets" method="POST" id="tweetsForm">
         <label for="tweet-text" class="tweetLabel">What are you humming about?</label>
         <textarea name="text" id="tweet-text"></textarea>
@@ -79,7 +87,7 @@
         </div>
       </form>
     </section>
-    
+
     <!-- dynamic tweets -->
     <section class="showTweetsHere">
       <div id="tweets-container"></div>
