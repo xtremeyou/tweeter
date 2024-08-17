@@ -6,7 +6,7 @@ $(document).ready(function () {
     const currentLength = $(this).val().length;
     const totalCount = maxLength - currentLength;
     count.text(totalCount);
-    
+
     if (totalCount <= 0) {
       count.addClass('red')
     } else if (totalCount > 0 || totalCount === 140) {

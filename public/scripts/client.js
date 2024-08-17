@@ -1,11 +1,12 @@
-$('#errorHandlingMessage').hide(); //I want it to hide before page load
+//I want it to hide before page load
+$('#errorHandlingMessage').hide();
 $('.new-tweet').hide();
 
 
 
 $(document).ready(function () {
 
-
+  //changes cursor to a pointer when hovering over write a new tweet button to elt user know they can click it
   $('.iconContainer').css('cursor', 'pointer');
 
   //write on click of nav class clickToSHowAndHideTweetForm to show the tweet section class new-tweet
@@ -28,7 +29,7 @@ $(document).ready(function () {
     return true;
   }
 
-  // subits form 
+  // submits form 
   $("#tweetsForm").on('submit', function (event) {
     event.preventDefault();
     const textAreaValue = $("textarea").val().trim();
