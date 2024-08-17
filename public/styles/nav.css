@@ -34,4 +34,6 @@ nav {
 /* changes the color of the drop down button*/
 .fa-solid {
   color: #eb0a0a;
+  font-size: 20px;
+  margin-top: 6px;
 }

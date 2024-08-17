@@ -1,6 +1,17 @@
 $('#errorHandlingMessage').hide(); //I want it to hide before page load
+$('.new-tweet').hide();
+
+
 
 $(document).ready(function () {
+
+
+  $('.iconContainer').css('cursor', 'pointer');
+
+  //write on click of nav class clickToSHowAndHideTweetForm to show the tweet section class new-tweet
+  $('.iconContainer').on('click', function (event) {
+    $('.new-tweet').slideToggle(200);
+  })
 
 
   //validation function for submit tweets form
