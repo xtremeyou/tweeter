@@ -24,6 +24,6 @@ This repository is the starter code for the project: Students will fork and clon
 
 ## Screenshots
 
-!["Screenshot of website in full size mode](https://github.com/xtremeyou/tweeter/blob/master/docs/ComputerMode.png.png?raw=true)
-!["Screenshot of Tablet mode with slidedown enabled"](https://github.com/xtremeyou/tweeter/blob/master/docs/TabletMode.png.png?raw=true)
-!["Screenshot of tablet mode with slideup enabled"]()
+!["Screenshot of website in full size mode](https://github.com/xtremeyou/tweeter/blob/master/docs/ComputerMode.png?raw=true)
+!["Screenshot of Tablet mode with slidedown enabled"](https://github.com/xtremeyou/tweeter/blob/master/docs/TabletMode.png)
+!["Screenshot of tablet mode with slideup enabled"](https://github.com/xtremeyou/tweeter/blob/master/docs/TabletModeWithTweetSlideUpClicked.png)
