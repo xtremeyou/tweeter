@@ -21,3 +21,9 @@ This repository is the starter code for the project: Students will fork and clon
 - MD5
 - Timeago
 - Nodemon
+
+## Screenshots
+
+!["Screenshot of website in full size mode](https://github.com/xtremeyou/tweeter/blob/master/docs/ComputerMode.png.png?raw=true)
+!["Screenshot of Tablet mode with slidedown enabled"](https://github.com/xtremeyou/tweeter/blob/master/docs/TabletMode.png.png?raw=true)
+!["Screenshot of tablet mode with slideup enabled"]()
