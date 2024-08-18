@@ -41,7 +41,7 @@ body {
   margin: auto;
   padding-top: 25px;
   background-color: inherit;
-  width: 90vw;
+  width: 90%;
 }
 
 @media (min-width: 1024px) {

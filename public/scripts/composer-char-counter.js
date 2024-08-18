@@ -1,6 +1,6 @@
 $(document).ready(function () {
 
-  $('#tweet-text').on('keyup', function (event) {
+  $('#tweet-text').on('keydown', function (event) {
     const maxLength = 140;
     const count = $('.counter')
     const currentLength = $(this).val().length;

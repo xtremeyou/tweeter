@@ -37,7 +37,7 @@ $(document).ready(function () {
     if (!isTweetValid(textAreaValue)) {
       return false;
     }
-    $.post("http://localhost:8080/tweets", $(this).serialize())
+    $.post("/tweets", $(this).serialize())
       .done(function () {
         loadTweets();
         $('#errorHandlingMessage').slideUp(200);
@@ -53,7 +53,7 @@ $(document).ready(function () {
 
   //gets form from server
   const loadTweets = function () {
-    $.ajax('http://localhost:8080/tweets', { method: 'GET' }) // grabs data from URL /tweets
+    $.ajax('/tweets', { method: 'GET' }) // grabs data from URL /tweets
       .then(function (data) { // upon success gets the data
         $('#tweets-container').empty();
         return renderTweets(data); // passes data to renderTweets
